@@ -1,0 +1,112 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    margin: 0;
+    padding: 0;
+    min-width: 600px;
+}
+
+.sidebar {
+    position: relative;
+    display: block;
+    padding: 1em;
+    width: 30%;
+    float: left;
+    background-color: #FFFFFF;
+    height: 100%;
+}
+
+.content {
+    position: relative;
+    padding: 1em;
+    width: 70%;
+    height: 100vh;
+    float: right;
+    border: 1px solid #000;
+    text-align: center;
+}
+
+.nav {
+    list-style: none;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav li {
+    color: #c0bfc1;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.nav > li:first-child {
+    border-bottom: 2px solid #e2e2e2;
+    cursor: initial;
+}
+
+.nav > li:first-child:hover {
+    background-color: initial;
+}
+
+.nav li:hover {
+    background-color: #fcf9f9;
+    color: #000;
+}
+
+ul > li > a {
+    display: block;
+    padding: 7px;
+    border-bottom: 1px solid #e2e2e2;
+    font-size: 18px;
+    font-weight: 500;
+    overflow: hidden;
+    /*..*/
+}
+
+.nav-name {
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: #646464;
+}
+
+.drop {
+    background-color: #FFFFFF;
+    list-style: none;
+    display: block;
+    max-height: 0;
+    transition: max-height .3s;
+}
+
+.drop > li {}
+
+.arrow {
+    position: relative;
+    top: 5pt;
+    float: right;
+    display: inline-block;
+    border-right: 0.14em solid;
+    border-bottom: 0.14em solid;
+    width: 8px;
+    height: 8px;
+    transform: rotate(-45deg);
+    margin-right: 0.5em;
+    transition: ease-in 0.2s;
+}
+
+.active .drop {
+    max-height: 250px;
+    transition: max-height 1s ease-out;
+}
+
+.actived {
+    transform: rotate(45deg) !important;
+}
+
+.clicked {
+    color: #292e83 !important;
+    background-color: #fcf9f9;
+}
